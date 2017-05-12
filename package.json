@@ -2,7 +2,7 @@
   "name": "starter",
   "version": "1.0.0",
   "description": "Nuxt.js project",
-  "author": "Brian 'bdougie' Douglas <ilikerobot@gmail.com>",
+  "author": "AT <info@altcointrading.net>",
   "private": true,
   "dependencies": {
     "nuxt": "latest"
