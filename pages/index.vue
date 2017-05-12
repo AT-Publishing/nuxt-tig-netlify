@@ -1,25 +1,27 @@
 <template>
   <section>
-
-  <section class="container">
+   <section class="container">
     <h1 class="title">
-      Universal Vue.js Application Framework
+      Recent Posts
     </h1>
+    <section>
+      <all-posts />
+    </section>
     <nuxt-link class="button" to="/about">
       About page
     </nuxt-link>
-    </section>
-    <my-hero/>
-
+   </section>
+   <my-hero/>
   </section>
 </template>
 
 <script>
 import MyHero from '~components/Hero.vue'
+import AllPosts from '~components/PostsContent.vue'
 
 export default {
   components: {
-    MyHero
+    MyHero, AllPosts
   }
 }
 

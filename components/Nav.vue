@@ -2,6 +2,9 @@
   <nav class="nav">
     <ul>
       <li>
+        <my-winkdex />
+      </li>
+      <li>
         <nuxt-link to="/" exact>Home</nuxt-link>
       </li>
       <li>
@@ -16,9 +19,22 @@
       <li>
         <nuxt-link to="/ta">Technicals</nuxt-link>
       </li>
+      <li>
+        <nuxt-link to="/about">About</nuxt-link>
+      </li>
     </ul>
   </nav>
 </template>
+
+<script>
+import MyWinkdex from '~components/Winkdex.vue'
+
+export default {
+  components: {
+    MyWinkdex
+  }
+}
+</script>
 
 <style>
 .nav {

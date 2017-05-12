@@ -6,13 +6,21 @@
     <h2 class="info" v-if="name === 'client'">
       Please refresh the page
     </h2>
+    <article>
+      <about-content />
+    </article>
     <nuxt-link class="button" to="/">
       Home page
     </nuxt-link>
   </section>
 </template>
 <script>
+import AboutContent from '~components/AboutContent.vue'
+
 export default {
+  components: {
+    AboutContent
+  },
   asyncData ({ req }) {
     return {
       name: req ? 'server' : 'client'
