@@ -1,8 +1,7 @@
 <template>
   <section class="container">
-    <img src="../assets/img/logo.png" alt="Nuxt.js Logo" class="logo" />
     <h1 class="title">
-      Searchable News Here
+      Volatility and Books here
     </h1>
     <nuxt-link class="button" to="/">Home</nuxt-link>
   </section>
