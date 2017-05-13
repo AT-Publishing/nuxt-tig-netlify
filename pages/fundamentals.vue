@@ -1,10 +1,6 @@
 <template>
-  <section class="container">
-    <h1 class="title">
-      Volatility and Books here
-    </h1>
+  <section class="container content">
     <all-posts />
-    <nuxt-link class="button" to="/">Home</nuxt-link>
   </section>
 </template>
 
@@ -19,8 +15,5 @@ export default {
 </script>
 
 <style scoped>
-.title
-{
-  margin: 50px 0;
-}
+
 </style>

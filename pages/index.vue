@@ -36,8 +36,4 @@ export default {
 </script>
 
 <style scoped>
-.title{margin: 0 0 45px;}
-.main {text-align: left;width:70%;float:left;margin-bottom: 50px;}
-.side {width:30%;float:left;margin-bottom: 50px;}
-.center {text-align: center}
 </style>

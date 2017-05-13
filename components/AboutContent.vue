@@ -2,9 +2,7 @@
   <section>
     <div class="container">
       <h2>{{this.posts.title}}</h2>
-      <div>
-        <vue-markdown :source="this.posts.content"></vue-markdown>
-      </div>
+      <div v-html="this.posts.content"></div>
     </div>
   </section>
 </template>
@@ -13,7 +11,6 @@
 import moment from 'moment'
 import axios from 'axios'
 import apicache from 'apicache'
-import VueMarkdown from 'vue-markdown'
 let cache = apicache.middleware
 export default {
   name: 'home',
@@ -21,9 +18,6 @@ export default {
     return {
       posts: []
     }
-  },
-  components: {
-    'vue-markdown': VueMarkdown
   },
   filters: {
     moment: function (str) {
@@ -48,5 +42,5 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
+Contact GitHub API Training Shop Blog About

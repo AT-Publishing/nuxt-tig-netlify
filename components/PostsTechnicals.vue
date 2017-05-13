@@ -1,14 +1,18 @@
 <template>
   <section>
-    <div class="container">
+    <div class="">
 
       <article v-for="item in this.posts">
-      <h2>{{item.title}}</h2>
-      <div>
-        <vue-markdown :source="item.content"></vue-markdown>
+      <h2 v-bind:id="item.slug" class="article">
+        <a v-bind:href="item.slug | hash">
+          {{item.title}}
+        </a>
+      </h2>
+      <p class="time article">
         <small v-if="item.created_at">Published: {{item.created_at | moment}}</small>
-        <small v-if="item.modified_at">&nbsp;|&nbsp;Updated: {{item.modified_at | moment}}</small>
-      </div>
+        <small v-if="item.modified_at">Updated: {{item.modified_at | moment}}</small>
+      </p>
+      <div v-html="item.content" class="article"></div>
      </article>
 
     </div>
@@ -19,7 +23,6 @@
 import moment from 'moment'
 import axios from 'axios'
 import apicache from 'apicache'
-import VueMarkdown from 'vue-markdown'
 let cache = apicache.middleware
 export default {
   name: 'home',
@@ -27,9 +30,6 @@ export default {
     return {
       posts: []
     }
-  },
-  components: {
-    'vue-markdown': VueMarkdown
   },
   filters: {
     moment: function (str) {
@@ -39,6 +39,9 @@ export default {
       } else {
         return '...'
       }
+    },
+    hash: function (str) {
+      return "#"+str
     }
   },
   created () {
@@ -54,5 +57,9 @@ export default {
 </script>
 
 <style scoped>
-
+.article {
+  max-width: 45%;
+  margin: 0 auto;
+  text-align: left;
+}
 </style>
