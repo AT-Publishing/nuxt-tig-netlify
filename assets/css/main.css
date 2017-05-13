@@ -9,6 +9,11 @@ html, body
   margin: 0;
 }
 
+body, p, article, blockquote, em, strong, small, span {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 
 
 .title{margin: 0 0 45px;}

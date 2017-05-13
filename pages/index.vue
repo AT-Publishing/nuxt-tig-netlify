@@ -5,8 +5,7 @@
     <div class="center">
       <div class="side">
 
-        <p><nuxt-link class="button" to="/about">About page</nuxt-link></p>
-        <p><nuxt-link class="button" to="/news">In the news</nuxt-link></p>
+        <my-bar />
 
       </div>
       <div class="main">
@@ -25,12 +24,13 @@
 
 <script>
 import MyHero from '~components/Hero.vue'
+import MyBar from '~components/Bar.vue'
 import AllPosts from '~components/PostsContent.vue'
 
 export default {
   props: ['page'],
   components: {
-    MyHero, AllPosts
+    MyHero, AllPosts, MyBar
   }
 }
 console.log("index")

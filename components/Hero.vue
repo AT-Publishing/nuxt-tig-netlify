@@ -7,6 +7,7 @@
 .hero-unit {
   height: 150px;
   clear:both;
+  margin-bottom: -50px;
 }
 .hero-unit {
   background: linear-gradient(140deg,#FC354C 10%, #0ABFBC 90%) center/cover no-repeat;

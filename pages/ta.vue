@@ -10,6 +10,11 @@ import AllPosts from '~components/PostsTechnicals.vue'
 export default {
   components: {
     AllPosts
+  },
+  head () {
+    return {
+      title: `Technical Analysis for Bitcoin Traders | This Is Gentlemen `
+    }
   }
 }
 </script>

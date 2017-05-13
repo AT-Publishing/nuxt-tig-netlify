@@ -1,10 +1,10 @@
 <template>
-<section>
-<p>view-source:https://amp2disqus.netlify.com/thisisgentlemen/newsdata/iframe.html</p>
-<iframe style="width: 700px; height: 1000px;border: none" src="https://amp2disqus.netlify.com/thisisgentlemen/newsdata/iframe.html">
-</iframe>
-<p>no idea how to separate them</p>
-</section>
+  <section>
+    <iframe
+      style="width: 700px; height: 1000px;border: none"
+      src="https://amp2disqus.netlify.com/thisisgentlemen/newsdata/iframe.html">
+    </iframe>
+  </section>
 </template>
 
 

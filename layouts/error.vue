@@ -1,4 +1,5 @@
 <template>
+  <div>
   <section class="container">
     <h1 class="title">
       {{ error.statusCode }}
@@ -10,27 +11,34 @@
       Homepage
     </nuxt-link>
   </section>
+  <my-hero />
+</div>
 </template>
 <script>
+import MyHero from '~components/Hero.vue'
+
 export default {
-  props: ['error']
+  props: ['error'],
+  components: {
+    MyHero
+  }
 }
 </script>
 
 <style scoped>
 .title
 {
-  margin-top: 15px;
+  margin: 50px;
   font-size: 5em;
 }
 .info
 {
   font-weight: 300;
   color: #9aabb1;
-  margin: 0;
+  margin: 50px;
 }
 .button
 {
-  margin-top: 50px;
+  margin: 50px;
 }
 </style>

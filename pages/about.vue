@@ -1,22 +1,23 @@
 <template>
+  <div>
   <section class="container">
-    <h1 class="title">
-      About
-    </h1>
     <article>
       <about-content />
+      <nuxt-link class="button" to="/">
+        Home page
+      </nuxt-link>
     </article>
-    <nuxt-link class="button" to="/">
-      Home page
-    </nuxt-link>
   </section>
+  <my-hero />
+</div>
 </template>
 <script>
 import AboutContent from '~components/AboutContent.vue'
+import MyHero from '~components/Hero.vue'
 
 export default {
   components: {
-    AboutContent
+    AboutContent, MyHero
   }
 }
 </script>

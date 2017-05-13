@@ -13,13 +13,10 @@
             <small v-if="item.created_at"><time v-bind:datetime="item.created_at">Published: {{item.created_at | moment}}</time></small>
             <small v-if="item.modified_at"><time v-bind:datetime="item.modified_at">Updated: {{item.modified_at | moment}}</time></small>
           </div>
-          <!-- make excerpt -->
+          <!-- excerpt -->
           <p v-html="item.metadata.description"></p>
           <p>
-            <!-- https://api.cosmicjs.com/v1/this-is-g/object/post-with-image -->
-            <a v-bind:href="item.slug" class="morelink">Read more</a>
-            &nbsp;
-            <nuxt-link class="morelink" :to="item.slug">Nuxt</nuxt-link>
+            <nuxt-link class="morelink" :to="item.slug">Read more</nuxt-link>
           </p>
         </div>
 
