@@ -1,10 +1,9 @@
 <template>
-  <div class="hero-unit" :style="style">
+  <div class="hero-unit">
   </div>
 </template>
 
-<style>
-
+<style scoped>
 .hero-unit {
   height: 150px;
   clear:both;
