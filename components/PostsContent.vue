@@ -14,10 +14,12 @@
             <small v-if="item.modified_at"><time v-bind:datetime="item.modified_at">Updated: {{item.modified_at | moment}}</time></small>
           </div>
           <!-- make excerpt -->
-          <p><vue-markdown :source="item.metadata.description"></vue-markdown></p>
+          <p v-html="item.metadata.description"></p>
           <p>
             <!-- https://api.cosmicjs.com/v1/this-is-g/object/post-with-image -->
             <a v-bind:href="item.slug" class="morelink">Read more</a>
+            &nbsp;
+            <nuxt-link class="morelink" :to="item.slug">Nuxt</nuxt-link>
           </p>
         </div>
 
@@ -33,17 +35,14 @@
   import moment from 'moment'
   import axios from 'axios'
   import apicache from 'apicache'
-  import VueMarkdown from 'vue-markdown'
   let cache = apicache.middleware
   export default {
     name: 'home',
+    props: ['page'],
     data () {
       return {
         posts: []
       }
-    },
-    components: {
-      'vue-markdown': VueMarkdown
     },
     filters: {
       moment: function (str) {

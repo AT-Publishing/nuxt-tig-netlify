@@ -1,38 +1,31 @@
 <template>
-  <section>
-  <h1>Cosmic</h1>
-  <main :key="page.slug">
-    <div class="container" v-html="page.content"></div>
-  </main>
-</section>
+  <section class="container">
+    <h1 class="article">{{ object.title }}</h1>
+    <div v-html="object.content" class="article"></div>
+  </section>
 </template>
 
 <script>
-import Cosmic from '~plugins/cosmic'
+import axios from 'axios'
 export default {
-  async data ({ params }) {
-    let res
-    try {
-      res = await Cosmic.getPage(params.slug || 'home')
-    } catch (e) {
-      res = await Cosmic.getPage('error')
-    }
-    return { page: res.object }
+  validate ({ params }) {
+    return params
   },
-  head () {
-    return {
-      title: this.page.title
-    }
+  asyncData ({ params, error }) {
+    console.log(params)
+    return axios.get(`https://api.cosmicjs.com/v1/this-is-g/object/${params.slug}`)
+    .then((res) => res.data)
+    .catch(() => {
+      error({ message: 'XX not found', statusCode: 404 })
+    })
   }
 }
 </script>
 
 <style scoped>
-.container {
+.article {
+  max-width: 45%;
   margin: 0 auto;
-  margin-top: 5px;
-  max-width: 960px;
-  padding: 15px;
-  padding-bottom: 40px;
+  text-align: left;
 }
 </style>
