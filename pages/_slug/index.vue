@@ -81,7 +81,7 @@ export default {
   padding: 0 25px;
   position: relative;
   float: left;
-  margin-bottom: 10px 
+  margin-bottom: 10px
 }
 h1 {
   width: 65%;

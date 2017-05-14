@@ -57,7 +57,7 @@ small {
   font-family: monospace;
 }
 .morelink {
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
   padding: 10px 15px;
   background: #3b3b3b;
