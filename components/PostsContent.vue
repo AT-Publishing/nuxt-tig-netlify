@@ -6,10 +6,13 @@
       <div>
 
         <div v-if="item.metadata.feature"  class="thumb">
-          <img v-bind:src="item.metadata.feature.url">
+          <nuxt-link :to="item.slug">
+            <img v-bind:src="item.metadata.feature.url">
+          </nuxt-link>
         </div>
         <div class="desc">
           <div class="time">
+            <!-- how to backdate though? -->
             <small v-if="item.created_at"><time v-bind:datetime="item.created_at">Published: {{item.created_at | moment}}</time></small>
             <small v-if="item.modified_at"><time v-bind:datetime="item.modified_at">Updated: {{item.modified_at | moment}}</time></small>
           </div>

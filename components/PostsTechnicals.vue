@@ -2,9 +2,9 @@
   <section>
     <div class="">
 
-      <div class=" article">
+      <div class="side">
 
-        <strong>Technical Analysis: All Posts</strong>
+        <h4>Technical Analysis: All Posts</h4>
 
         <div v-for="item in this.posts">
           <p>
@@ -14,8 +14,16 @@
           </p>
         </div>
 
+        <my-bar />
 
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6979812205705127" data-ad-slot="6506986898"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+
+      <div class=" article">
+
+
+
+        <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6979812205705127" data-ad-slot="6506986898"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 
         <article v-for="item in this.posts">
@@ -32,6 +40,20 @@
       </div><!-- // article -->
 
 
+      <div class="aside">
+
+        <!-- tig_sky -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:160px;height:600px"
+             data-ad-client="ca-pub-6979812205705127"
+             data-ad-slot="7061619693"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+      </div>
+
+
 
     </div>
   </section>
@@ -41,6 +63,8 @@
 import moment from 'moment'
 import axios from 'axios'
 import apicache from 'apicache'
+import MyBar from '~components/Bar.vue'
+
 let cache = apicache.middleware
 export default {
   name: 'home',
@@ -48,6 +72,9 @@ export default {
     return {
       posts: []
     }
+  },
+  components: {
+    MyBar
   },
   filters: {
     moment: function (str) {
@@ -79,11 +106,26 @@ export default {
 
 <style scoped>
 .article {
-  max-width: 45%;
-  margin: 0 auto;
+  max-width: 55%;
+  margin: 0;
   text-align: left;
+  float: left;
 }
 .feed {
   width: 100%
+}
+.aside {
+  max-width: 15%;
+  margin: 0 auto;
+  text-align: center;
+  float: left;
+}
+.aside * {
+  margin: 0 auto
+}
+@media (max-width: 776px) {
+  .aside {
+    display: none;
+  }
 }
 </style>

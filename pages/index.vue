@@ -7,6 +7,7 @@
 
         <my-bar />
 
+
       </div>
       <div class="main">
 
@@ -33,7 +34,6 @@ export default {
     MyHero, AllPosts, MyBar
   }
 }
-console.log("index")
 </script>
 
 <style scoped>

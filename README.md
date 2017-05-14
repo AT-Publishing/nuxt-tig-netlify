@@ -21,6 +21,10 @@ package.json to do
 }
 ```
 
+**cannot do the news, it needs runtime compiler, crashes**
+
+https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only
+
 ## Build Setup
 
 ``` bash
